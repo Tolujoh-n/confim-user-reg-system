@@ -359,58 +359,55 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-5px);
   }
 }
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
+  overflow: hidden;
 }
 
 .section-bg {
-  background-color: white;
+  background-color: #ebfdee;
 }
 
 .section-title {
-  text-align: center;
-  padding: 30px 0;
-  position: relative;
+  padding-bottom: 40px;
 }
+
 .section-title h2 {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 0;
-  color: #3b434a;
-  position: relative;
-  z-index: 2;
+  color: rgb(10, 10, 9);
+  font-family: "Poppins", sans-serif;
 }
-.section-title span {
-  position: absolute;
-  top: 30px;
-  color: #eef0f2;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  font-weight: 700;
-  font-size: 52px;
-  text-transform: uppercase;
-  line-height: 0;
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: white;
+  margin: 4px 10px;
 }
+
+
 .section-title p {
-  margin-bottom: 0;
-  position: relative;
-  z-index: 2;
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: rgb(17, 17, 15);
 }
-@media (max-width: 575px) {
-  .section-title h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-  .section-title span {
-    font-size: 38px;
-  }
-}
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -464,7 +461,81 @@ section {
     display: inline-block;
   }
 }
-/*   login section */
+
+
+
+/*--------------------------------------------------------------
+# About Boxes
+--------------------------------------------------------------*/
+.about-boxes {
+  background-color: #f2f4f7;
+}
+.about-boxes {
+  background-size: cover;
+  padding: 60px 0 30px 0;
+  position: relative;
+}
+
+.about-boxes::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #E3F1FF;
+  z-index: 9;
+}
+
+.about-boxes .container, .about-boxes .container-fluid {
+  position: relative;
+  z-index: 10;
+}
+
+.about-boxes .card {
+  border-radius: 3px;
+  border: 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 5%;
+  border-radius: 30px;
+}
+
+.about-boxes .card-body {
+  padding-top: 12px;
+}
+
+.about-boxes .card-title {
+  font-weight: 700;
+  text-align: center;
+}
+
+.about-boxes .card-title a {
+  color: gold;
+}
+
+.about-boxes .card-title a:hover {
+  color: gold;
+}
+
+.about-boxes .card-text {
+  color: black;
+}
+.about-boxes img {
+  border-radius: 40px;
+}
+
+.about-boxes .card:hover .card-icon i {
+  background: #fff;
+  color: gold;
+}
+
+@media (max-width: 1024px) {
+  .about-boxes {
+    background-attachment: scroll;
+  }
+}
+
 
 
 /*--------------------------------------------------------------
